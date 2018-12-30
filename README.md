@@ -5,6 +5,12 @@ This supports Native iOS/Android and React Native!
  Make sure you have iOS or Android development environments setup. Meaning you can create .apk for Android or .app for iOS.
  - For iOS e2e setup:
   - brew install carthage
+  
+  Allure and windows compat:
+  npm install -g --production windows-build-tools
+  npm install -g allure-commandline --save-dev
+  .net framework 2.0 sdk
+  
 * Get Running:
   ```
     // install dependencies
