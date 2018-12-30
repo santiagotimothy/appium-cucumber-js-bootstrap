@@ -24,7 +24,7 @@
     "wdio-allure-reporter": "^0.8.3",
     "wdio-appium-service": "0.2.3",
     "wdio-browserstack-service": "^0.1.16",
-    "wdio-cucumber-framework": "2.2.0",
+    "wdio-cucumber-framework": "^2.2.0",
     "wdio-spec-reporter": "0.1.4",
     "webdriverio": "^4.13.1"
   },

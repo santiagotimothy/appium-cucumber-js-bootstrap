@@ -8,7 +8,6 @@ const capabilities = {
   android: {
     waitforTimeout,
     commandTimeout,
-    browserName: 'Android',
     platformName: "Android",
     unicodeKeyboard: true,
     newCommandTimeout: 30 * 60000,
@@ -16,8 +15,8 @@ const capabilities = {
     noReset: true,
     platformVersion: "8.0",
     automationName: "UiAutomator2",
-    deviceName: "Google Pixel",
-    app: getAppPath(true)
+    deviceName: "Google Nexus 5X",
+    app: getAppPath(true),
   },
   ios: {
     waitforTimeout,
@@ -37,6 +36,7 @@ const capabilities = {
 }
 const getCapability = () => {
   if (process.env.ANDROID) {
+    console.log(capabilities.android);
     return capabilities.android
   } else if (process.env.IOS) {
     return capabilities.ios
@@ -45,6 +45,8 @@ const getCapability = () => {
 }
 exports.config = Object.assign(commonConfig.config, {
   capabilities: getCapability(),
+  desiredCapabilities: getCapability(),
+  platformName: "Android", //TODO iOS support
   services: ['appium'],
   maxInstances: 2,
   appium: {
