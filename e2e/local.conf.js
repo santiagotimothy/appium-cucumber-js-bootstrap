@@ -21,7 +21,6 @@ const capabilities = {
   ios: {
     waitforTimeout,
     commandTimeout,
-    browserName: 'iOS',
     platformName: 'iOS',
     unicodeKeyboard: true,
     newCommandTimeout: 30 * 60000,
@@ -29,14 +28,13 @@ const capabilities = {
     noReset: true,
     nativeInstrumentsLib: true,
     isolateSimDevice: true,
-    platformVersion: "11.2",
+    platformVersion: "12.1",
     deviceName: "iPhone 6",
     app: getAppPath()
   }
 }
 const getCapability = () => {
   if (process.env.ANDROID) {
-    console.log(capabilities.android);
     return capabilities.android
   } else if (process.env.IOS) {
     return capabilities.ios
@@ -46,7 +44,7 @@ const getCapability = () => {
 exports.config = Object.assign(commonConfig.config, {
   capabilities: getCapability(),
   desiredCapabilities: getCapability(),
-  platformName: "Android", //TODO iOS support
+  platformName: process.env.ANDROID ? "android" : "iOS",
   services: ['appium'],
   maxInstances: 2,
   appium: {
@@ -61,7 +59,7 @@ exports.config = Object.assign(commonConfig.config, {
       noReset: true,
       autoAcceptAlerts: true,
       debugLogSpacing: false,
-      appiumVersion: '1.8.1', // Appium module version
+      appiumVersion: '1.10.0', // Appium module version
       autoGrantPermissions: true,
     }
   },

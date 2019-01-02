@@ -8,7 +8,7 @@
     "@types/node": "^10.5.2",
     "@types/webdriverio": "^4.10.3",
     "@wdio/allure-reporter": "^5.0.0",
-    "appium": "1.8.1",
+    "appium": "1.10.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "chai": "4.1.2",
     "chai-as-promised": "^6.0.0",
@@ -24,7 +24,7 @@
     "wdio-allure-reporter": "^0.8.3",
     "wdio-appium-service": "0.2.3",
     "wdio-browserstack-service": "^0.1.16",
-    "wdio-cucumber-framework": "^2.2.0",
+    "wdio-cucumber-framework": "^2.2.8",
     "wdio-spec-reporter": "0.1.4",
     "webdriverio": "^4.13.1"
   },

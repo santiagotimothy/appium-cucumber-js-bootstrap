@@ -71,3 +71,7 @@ package-lock.json
 RNTester/build
 
 /ios/build/
+
+# build binaries
+*.apk
+*.app
